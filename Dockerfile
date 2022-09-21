@@ -11,6 +11,8 @@ RUN apt-get update && apt-get upgrade -y && \
     npm                       # note this one
 
 # Install the application's dependencies into the node_modules's cache directory.
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install
+# COPY package.json ./
+# COPY package-lock.json ./
+# RUN npm install
+
+RUN npm install -g mocha
