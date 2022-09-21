@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:current-alpine
 
 # ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
