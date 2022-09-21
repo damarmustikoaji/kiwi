@@ -15,7 +15,7 @@ RUN apk add --update nodejs-current npm
 
 # Install the application's dependencies into the node_modules's cache directory.
 COPY package.json ./
-# COPY package-lock.json ./
+COPY package-lock.json ./
 RUN npm install
 
 # RUN npm install -g mocha
