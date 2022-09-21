@@ -1,18 +1,21 @@
-FROM ubuntu:18.04
+# FROM ubuntu:18.04
 
-# ENV NPM_CONFIG_PREFIX=/durian/.npm-global
+FROM node:10.15.2-alpine
+# WORKDIR /usr/src/app
 
-# ENV PATH=$PATH:/durian/.npm-global/bin
+ENV NPM_CONFIG_PREFIX=/durian/.npm-global
 
-# RUN apk add --update nodejs-current npm
+ENV PATH=$PATH:/durian/.npm-global/bin
 
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y nodejs \
-    npm
+RUN apk add --update nodejs-current npm
+
+# RUN apt-get update && apt-get upgrade -y && \
+#     apt-get install -y nodejs \
+#     npm
 
 # Install the application's dependencies into the node_modules's cache directory.
-# COPY package.json ./
+COPY package.json ./
 # COPY package-lock.json ./
-# RUN npm install
+RUN npm install -g
 
-RUN npm install -g mocha
+# RUN npm install -g mocha
