@@ -7,7 +7,7 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 RUN apk add --update nodejs-current npm
 
 # Create and define the node_modules's cache directory.
-RUN mkdir /usr/src/cache
+RUN mkdir -p /usr/src/cache
 WORKDIR /usr/src/cache
 
 # Install the application's dependencies into the node_modules's cache directory.
