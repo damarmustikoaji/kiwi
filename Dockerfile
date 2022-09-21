@@ -1,12 +1,13 @@
-# syntax=docker/dockerfile:1
+FROM node:18-alpine
 
-FROM node:12.18.1
-ENV NODE_ENV=sdet-test
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
-WORKDIR /app
+ENV PATH=$PATH:/home/node/.npm-global/bin
 
-COPY ["package.json", "package-lock.json*", "./"]
+RUN apk add --update nodejs-current npm
 
-RUN npm install --sdet-test
+RUN npm install -g mocha
 
-COPY . .
+RUN npm install -g chai
+
+RUN npm install -g supertest
