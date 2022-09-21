@@ -6,8 +6,11 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 
 RUN apk add --update nodejs-current npm
 
-RUN npm install -g mocha
+# Create and define the node_modules's cache directory.
+RUN mkdir /usr/src/cache
+WORKDIR /usr/src/cache
 
-RUN npm install -g chai
-
-RUN npm install -g supertest
+# Install the application's dependencies into the node_modules's cache directory.
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
