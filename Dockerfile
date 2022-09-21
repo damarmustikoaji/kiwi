@@ -4,7 +4,7 @@ FROM node:18-alpine
 
 # ENV PATH=$PATH:/home/node/.npm-global/bin
 
-ENV NODE_PATH=/usr/lib/node_modules
+ENV NODE_PATH=/app/node_modules
 
 WORKDIR /app/
 
