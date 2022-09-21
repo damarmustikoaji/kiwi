@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 
 # ENV PATH=$PATH:/durian/.npm-global/bin
 
-RUN apk add --update nodejs-current npm
+# RUN apk add --update nodejs-current npm
 
 # Install the application's dependencies into the node_modules's cache directory.
 COPY package.json ./
