@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node:18-alpine
 
 # ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
@@ -9,6 +9,8 @@ ENV NODE_PATH=/usr/lib/node_modules
 WORKDIR /app/
 
 # RUN apk add --update nodejs-current npm
+
+RUN npm install npm@latest -g
 
 RUN npm install -g mocha
 
