@@ -1,8 +1,8 @@
-FROM node:18-alpine
+FROM ubuntu:18.04
 
-ENV NPM_CONFIG_PREFIX=/durian/.npm-global
+# ENV NPM_CONFIG_PREFIX=/durian/.npm-global
 
-ENV PATH=$PATH:/durian/.npm-global/bin
+# ENV PATH=$PATH:/durian/.npm-global/bin
 
 RUN apk add --update nodejs-current npm
 
