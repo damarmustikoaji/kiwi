@@ -15,4 +15,4 @@ RUN apt-get update && apt-get upgrade -y && \
 # COPY package-lock.json ./
 # RUN npm install
 
-RUN npm install -g mocha
+RUN npm install -g mocha -y
