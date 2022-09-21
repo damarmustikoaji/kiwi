@@ -8,11 +8,11 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
-    npm                       # note this one
+    npm
 
 # Install the application's dependencies into the node_modules's cache directory.
 # COPY package.json ./
 # COPY package-lock.json ./
 # RUN npm install
 
-RUN npm install -g mocha -y
+RUN npm install -g mocha
