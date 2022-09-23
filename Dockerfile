@@ -20,4 +20,6 @@ RUN npm install -g mochawesome
 
 RUN npm install -g chai
 
+RUN npm install -g chai-json-schema
+
 RUN npm install -g supertest
