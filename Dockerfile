@@ -6,6 +6,8 @@ FROM node:18-alpine
 
 ENV NODE_PATH=/app/node_modules
 
+ENV PATH=/app:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 WORKDIR /app/
 
 # RUN apk add --update nodejs-current npm
@@ -19,5 +21,3 @@ RUN npm install -g mochawesome
 RUN npm install -g chai
 
 RUN npm install -g supertest
-
-ENV PATH=/app:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
