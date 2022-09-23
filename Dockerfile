@@ -10,7 +10,7 @@ ENV PATH=/app:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 WORKDIR /app/
 
-# RUN apk add --update nodejs-current npm
+RUN apk add --update nodejs-current npm
 
 RUN npm install npm@latest -g
 
