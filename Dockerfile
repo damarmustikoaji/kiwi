@@ -14,12 +14,16 @@ RUN apk add --update nodejs-current npm
 
 RUN npm install npm@latest -g
 
-RUN npm install -g mocha
+# RUN npm install -g mocha
 
-RUN npm install -g mochawesome
+# RUN npm install -g mochawesome
 
-RUN npm install -g chai
+# RUN npm install -g chai
 
-RUN npm install -g chai-json-schema
+# RUN npm install -g chai-json-schema
 
-RUN npm install -g supertest
+# RUN npm install -g supertest
+
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install -g
