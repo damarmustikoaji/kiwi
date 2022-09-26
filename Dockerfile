@@ -6,7 +6,7 @@ FROM node:18-alpine
 
 ENV NODE_PATH=/app/node_modules
 
-ENV PATH=/app:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# ENV PATH=/app:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 WORKDIR /app/
 
