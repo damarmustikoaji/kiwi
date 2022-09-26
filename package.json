@@ -1,7 +1,7 @@
 {
     "name": "sdet-test",
     "version": "1.0.1",
-    "description": "Gilgamesh API Automation Test",
+    "description": "API Automation Test",
     "directories": {
         "test": "tests"
     },
