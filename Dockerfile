@@ -25,5 +25,7 @@ RUN npm install npm@latest -g
 # RUN npm install -g supertest
 
 COPY package.json ./
+
 COPY package-lock.json ./
-RUN npm install -g
+
+RUN npm install
