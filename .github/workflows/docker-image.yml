@@ -25,8 +25,5 @@ jobs:
       run: docker push $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
     - name: Generate list using Markdown
       run: |
-        echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
-        echo $GITHUB_WORKFLOW >> $GITHUB_STEP_SUMMARY
-        echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
-        echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
+        echo "Update:" >> $GITHUB_STEP_SUMMARY
+        echo "- " $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }} >> $GITHUB_STEP_SUMMARY
