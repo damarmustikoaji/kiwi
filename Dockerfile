@@ -1,12 +1,22 @@
-FROM node:18-alpine
+# This file is a template, and might need editing before it works on your project.
+FROM node:alpine
 
-ENV NPM_CONFIG_PREFIX=/durian/.npm-global
+LABEL desc="API Automation Test"
 
-ENV PATH=$PATH:/durian/.npm-global/bin
+# Install node package manager (latest version) if not available npm
+# RUN apk add --update nodejs-current npm
+# RUN npm install npm@latest -g
 
-RUN apk add --update nodejs-current npm
+# Install curl for health check
+RUN apk --no-cache add curl
 
-# Install the application's dependencies into the node_modules's cache directory.
-COPY package.json ./
-COPY package-lock.json ./
+# Setup default path node_modules
+ARG NODE_PATH=/sdet/node_modules
+ENV NODE_PATH $NODE_PATH
+
+# Create work directory
+WORKDIR /sdet/
+
+# Copy the package and install dependencies
+COPY package.json .
 RUN npm install
