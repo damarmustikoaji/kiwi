@@ -26,4 +26,4 @@ jobs:
     - name: Generate list using Markdown
       run: |
         echo "Update:" >> $GITHUB_STEP_SUMMARY
-        echo "- " $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }} >> $GITHUB_STEP_SUMMARY
+        echo "- " $DOCKER_USER"/"$REPO_NAME":"${{ steps.date.outputs.date }} >> $GITHUB_STEP_SUMMARY
