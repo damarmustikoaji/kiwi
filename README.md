@@ -1,3 +1,5 @@
+[![Build Image](https://github.com/damarmustikoaji/kiwi/actions/workflows/docker-image.yml/badge.svg?branch=master)](https://github.com/damarmustikoaji/kiwi/actions/workflows/docker-image.yml)
+
 # Kiwi #
 
 This README documents whatever steps are necessary to get this project running up.
