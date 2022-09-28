@@ -26,4 +26,4 @@ jobs:
     - name: Summary
       run: |
         echo "Update version:" >> $GITHUB_STEP_SUMMARY
-        echo "- damarresin/kiwi:" ${{ steps.date.outputs.date }} >> $GITHUB_STEP_SUMMARY
+        echo "- /:" ${{ steps.date.outputs.date }} >> $GITHUB_STEP_SUMMARY
