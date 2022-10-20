@@ -19,4 +19,5 @@ WORKDIR /sdet/
 
 # Copy the package and install dependencies
 COPY package.json .
+COPY reporter .
 RUN npm install

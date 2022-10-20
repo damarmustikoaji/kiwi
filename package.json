@@ -1,56 +1,54 @@
 {
-  "name": "kiwi",
-  "version": "1.0.0",
+  "name": "sdet-test",
+  "version": "1.0.1",
   "description": "API Automation Test",
+  "directories": {
+      "test": "tests"
+  },
   "scripts": {
-    "test-api": "mocha ./tests --recursive --reporter mochawesome --reporter-options reportDir=reports/ --timeout 30000",
-    "reports": "open 'reports/mochawesome.html'"
+      "test-api": "mocha ./tests --recursive --reporter mochawesome --reporter-options reportDir=reports/ --timeout 10000",
+      "reports": "open 'reports/mochawesome.html'",
+      "report-mapping": "node ./reporter/reports_mapping_mochawesome.js",
+      "report-db": "node ./reporter/reports_database.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/damarmustikoaji/kiwi.git"
-  },
-  "keywords": [
-    "kiwi"
-  ],
   "author": "damar mustiko aji",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/damarmustikoaji/kiwi/issues"
-  },
-  "homepage": "https://github.com/damarmustikoaji/kiwi#readme",
   "dependencies": {
-    "chai": "^4.3.6",
-    "chai-json-schema": "^1.5.1",
-    "dotenv": "^16.0.2",
-    "mocha": "^10.0.0",
-    "mochawesome": "^7.1.3",
-    "supertest": "^6.2.4"
+      "chai": "^4.2.0",
+      "chai-json-schema": "^1.5.1",
+      "dotenv": "^8.2.0",
+      "mocha": "^9.2.2",
+      "mochawesome": "^7.1.2",
+      "moment-timezone": "^0.5.33",
+      "ms-teams-webhook": "^1.0.4",
+      "mysql": "^2.18.1",
+      "replace-string": "^3.1.0",
+      "supertest": "^6.1.1"
   },
   "devDependencies": {
-    "eslint": "^8.24.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-mocha": "^10.1.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-standard": "^5.0.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+      "eslint": "^8.11.0",
+      "eslint-config-standard": "^14.0.1",
+      "eslint-plugin-import": "^2.18.2",
+      "eslint-plugin-mocha": "^6.2.2",
+      "eslint-plugin-node": "^9.1.0",
+      "eslint-plugin-prettier": "^3.3.1",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-standard": "^4.0.0",
+      "husky": "^3.1.0",
+      "lint-staged": "^12.3.7",
+      "prettier": "^2.2.1"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+      "hooks": {
+          "pre-commit": "lint-staged"
+      }
   },
   "lint-staged": {
-    "*.js": [
-      "./node_modules/.bin/eslint"
-    ]
+      "*.js": [
+          "./node_modules/.bin/eslint"
+      ]
   },
   "eslintIgnore": [
-    "node_modules"
+      "node_modules"
   ]
 }

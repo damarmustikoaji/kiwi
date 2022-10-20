@@ -1,0 +1,6 @@
+{
+  "api/**/*.js": [
+    "eslint --fix",
+    "git add ."
+  ]
+}
