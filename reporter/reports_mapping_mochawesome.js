@@ -1,4 +1,4 @@
-const { mappingReports } = require('./helpers/mapping');
+const { mappingReports, } = require('./helpers/mapping');
 const data = require('../reports/mochawesome.json');
 const fs = require('fs');
 
